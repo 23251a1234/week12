@@ -72,7 +72,7 @@ pipeline {
             junit testResults: 'test-results.xml',
                   allowEmptyResults: true
 
-            bat 'docker rm -f week12-registration-container >nul 2>&1'
+            bat 'docker rm -f week12-registration-container >nul 2>&1 || exit /b 0'
         }
     }
 }
